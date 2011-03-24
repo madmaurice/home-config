@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='C:/Perl/lib/Carp'
+let g:netrw_dirhist_2='C:/cygwin/home/jmaurice/branch/nbe4.0/script/Test/Gw'
+let g:netrw_dirhist_3='C:/cygwin/home/jmaurice/branch/nbe4.0/script/Test'
+let g:netrw_dirhist_4='C:/cygwin/home/jmaurice/branch/nbe4.0/script/Test/Time'
+let g:netrw_dirhist_5='C:/cygwin/home/jmaurice/branch/nbe4.0/script/Test/Gw'
+let g:netrw_dirhist_6='C:/cygwin/home/jmaurice/branch/nbe4.0/script'

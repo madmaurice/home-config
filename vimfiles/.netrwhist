@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='c:\Program Files\Vim'
+let g:netrw_dirhist_2='C:\cygwin\home\jmaurice\vimfiles\snippets'
+let g:netrw_dirhist_3='C:\cygwin\home\jmaurice\branch\nbe4.0\test\gw\gw_earlymedia'
+let g:netrw_dirhist_4='C:\cygwin\home\jmaurice\vimfiles\snippets'
+let g:netrw_dirhist_5='C:\cygwin\home\jmaurice\branch\nbe4.0\test\gw\gw_earlymedia'
+let g:netrw_dirhist_6='C:/cygwin/home/jmaurice/branch/nbe4.0/test/gw'
+let g:netrw_dirhist_7='C:\cygwin\home\jmaurice\branch\nbe4.0\test\gw\gw_earlymedia'
+let g:netrw_dirhist_8='C:\cygwin\home\jmaurice\vimfiles\doc'
+let g:netrw_dirhist_9='c:\Program Files\Vim'

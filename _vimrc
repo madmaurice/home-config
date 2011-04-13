@@ -163,7 +163,10 @@ inoremap jj <Esc>
 
 " Copy and paste to/from clipboard.
 vnoremap <leader>y  "+y
+vnoremap <C-C> "+y
+
 map      <leader>p	"+gP
+inoremap <C-V>	<ESC>"+gPa
 cmap <C-V>		<C-R>+
 
 " Pasting blockwise and linewise selections is not possible in Insert and

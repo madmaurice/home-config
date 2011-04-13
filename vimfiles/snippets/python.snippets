@@ -28,7 +28,6 @@ snippet cl
 snippet def
 	def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
 		"""${3:docstring for $1}"""
-		t = TraceScope("$1.")
 		${4:pass}
 snippet deff
 	def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):

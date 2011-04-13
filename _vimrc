@@ -59,7 +59,11 @@ set browsedir=buffer
 set mousehide
 
 " Set fonts
-set guifont=Courier_New:h10
+if has('win32')
+  set guifont=Courier_New:h10
+else
+  set guifont=DejaVu\ Sans\ Mono\ 8
+endif
 
 " keep 50 lines of command line history
 set history=50
@@ -337,7 +341,9 @@ if has("autocmd")
     autocmd BufEnter * lcd %:p:h
      
     "Maximize the window
-    au GUIEnter * simalt ~x
+    if has('win32')
+      au GUIEnter * simalt ~x
+    endif
 
     "Remove visualbell and flash.
     au GuiEnter * set vb t_vb=

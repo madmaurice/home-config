@@ -112,6 +112,9 @@ set smartindent " smartindent (local to buffer)
 set wrap
 set linebreak  " Wrap at word
 
+" Break lines of 80+ characters
+set textwidth=80
+
 " Default file format
 set fileformats=unix,dos
 

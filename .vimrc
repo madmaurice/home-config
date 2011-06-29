@@ -62,7 +62,7 @@ set mousehide
 if has('win32')
   set guifont=Courier_New:h10
 else
-  set guifont=DejaVu\ Sans\ Mono\ 8
+  set guifont=DejaVu\ Sans\ Mono\ 10
 endif
 
 " keep 50 lines of command line history

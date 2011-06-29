@@ -352,8 +352,9 @@ if has("autocmd")
     au GuiEnter * set vb t_vb=
 
     "C/C++ stuff
-    "autocmd BufNewFile  *.\(c\|cc\|cpp\|C\)  call C_CommentTemplates('cheader')
-    "autocmd BufNewFile  *.\(h\|hpp\)         call C_CommentTemplates('hheader')
+    autocmd BufNewFile  *.\(c\|cc\|cpp\|C\)  call C_CommentTemplates('cheader')
+    autocmd BufNewFile  *.\(h\|hpp\)         call C_CommentTemplates('hheader')
+    autocmd BufNewFile  *.py                 call C_CommentTemplates('python-header')
 
     " When editing a file, always jump to the last known cursor position.
     " Don't do it when the position is invalid or when inside an event handler

@@ -9,3 +9,5 @@ Email: |EMAIL|
 Description: |CURSOR|
 
 """
+
+from gamelib.gameLogger import TraceScope

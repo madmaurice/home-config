@@ -55,7 +55,7 @@ let s:C_AuthorName      = "Jonathan Maurice"                             " |AUTH
 let s:C_AuthorRef       = ""                                            " |AUTHORREF|
 let s:C_Email           = "madmaurice [at] hotmail [dot] com"           " |EMAIL|
 let s:C_Company         = ""                                            " |COMPANY|   
-let s:C_Project         = $MY_PROJECT_NAME                              " |PROJECT|
+let s:C_Project         = $JM_PROJECT_NAME                              " |PROJECT|
 let s:C_CopyrightHolder = ""                                            " |COPYRIGHTHOLDER|
 "
 "  Copyright information. If the code has been developed over a period of years, 
@@ -106,8 +106,7 @@ let s:C_Comments  = "yes"
 " The style of the multi-line comments has to be changed in the template files:
 "
 "  
-"let s:C_Template_Directory    = $HOME."/.vim/plugin/templates/"
-let s:C_Template_Directory    = $HOME."/vimfiles/plugin/templates/"
+let s:C_Template_Directory    = $HOME."/.vim/plugin/templates/"
 "                           
 "                             ----- C template files ---- ( 1. set of templates ) ----
 "                             

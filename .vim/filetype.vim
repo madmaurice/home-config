@@ -9,8 +9,6 @@ augroup filetypedetect
 
 " VMWare config files are following same syntax as jproperties (Java)
 au BufNewFile,BufRead *.vmx	setf jproperties
-" open all .conf files as asterisk config files
-au BufNewFile,BufRead *.conf         setf asterisk 
 
 augroup end
 

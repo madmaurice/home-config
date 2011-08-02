@@ -317,7 +317,7 @@ let c_comment_strings=1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " pydiction module setup
-let g:pydiction_location = "$HOME/vimfiles/ftplugin/pydiction/complete-dict"
+let g:pydiction_location = "$HOME/.vim/ftplugin/pydiction/complete-dict"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Perl

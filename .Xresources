@@ -1,0 +1,96 @@
+*foreground: #D7D0C8
+*background: #151515
+
+!black
+! *color0:     #AF875F
+! *color8:     #AF875F
+*color0:     #101010
+*color8:     #404040
+!red
+*color1:     #E84F4F
+*color9:     #D23D3D
+!green
+*color2:     #B8D68C
+*color10:    #A0CF5D
+!yellow
+*color3:     #E1AA5D
+*color11:    #F39D21
+!blue
+*color4:     #7DC1CF
+*color12:    #4E9FB1
+!magenta
+*color5:     #9B64FB
+*color13:    #8542FF
+!cyan
+*color6:     #6D878D
+*color14:    #42717B
+!white
+*color7:     #dddddd
+*color15:    #dddddd
+
+URxvt*borderColor:        #151515
+URxvt*colorBD:            #ffffff
+URxvt*cursorColor:        #ff8939
+!blue cursor
+!URxvt*cursorColor:        #244cb3
+URxvt*cursorColor2:       #151515
+
+! Enable tab
+URxvt.perl-ext-common:  default,tabbed
+URxvt.tabbed.tabbar-fg: 6
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg:    4
+URxvt.tabbed.tab-bg:    0
+
+! transparency - true or false (default)
+URxvt*transparent: true
+
+! tint with any color; i.e., blue, red, tomato4, olivedrab2, etc.
+!   some nice listings are at:
+!     http://www.nisrv.com/drupal/?q=node/11
+!     http://www.htmlgoodies.com/tutorials/colors/article.php/3478921
+!URxvt*tintColor: #5C5C5C
+URxvt*tintColor: #212121
+
+! shading - 0 to 99 darkens, 101 to 200 lightens.
+!   Dont use with tintColor; just use a darker or lighter color instead.
+!URxvt*shading: 40
+
+! scrollback buffer lines - 65535 is max on most machines (64 is default)
+URxvt*saveLines: 12000
+
+! font color (default is black)
+URxvt*foreground: White
+
+! background color (prior to tinting) (default is white)
+URxvt*background: Black
+
+! Xft (X FreeType) with Bitstream, DejaVu, Liberation, or Terminus fonts:
+!  Fedora/debian packages: libXft/libxft2 
+!  An anti-aliased font setup with Xft looks fantastic; it can be a bit choppy 
+!  on older systems. You can always turn off anti-aliasing (antialias=false) if
+!  your terminal is sluggish. Use only ONE of the Xft pairs below:
+!
+!
+! Xft: DejaVu fonts
+!  Fedora/debian packages: dejavu-sans-mono-fonts/ttf-dejavu 
+URxvt*font: xft:DejaVu Sans Mono:pixelsize=14:antialias=true:hinting=true
+URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=14:antialias=true:hinting=true
+!
+
+! Replace blue folder colors with a lighter shade for clarity. To
+!  set colored folders and files within urxvt, xterm, and aterm, add
+!  the following line to your ~/.bashrc ($HOME/.bashrc) file under
+!  the heading "# User specific aliases and functions":
+!   alias ls="ls -h --color=auto"
+URxvt*color4: RoyalBlue
+URxvt*color12: RoyalBlue
+
+! scrollbar - true (default) or false
+URxvt*scrollBar: false
+
+! scrollbar position - left=false (default) or right=true
+URxvt*scrollBar_right: false
+
+! scrollbar style - rxvt (default), plain, next, or xterm
+URxvt*scrollstyle: rxvt

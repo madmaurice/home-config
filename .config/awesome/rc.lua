@@ -6,13 +6,15 @@ require("awful.rules")
 require("beautiful")
 -- Notification library
 require("naughty")
+-- Vicious
+require("vicious")
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/home/jmaurice/.config/awesome/themes/arch/theme.lua")
+beautiful.init("/home/jmaurice/.config/awesome/themes/jmarch/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "terminal"
+terminal = "urxvt"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 file_manager_cmd = "thunar"
@@ -78,6 +80,21 @@ mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
 -- }}}
 
 -- {{{ Wibox
+
+-- cpu usage widget
+cpuwidget = widget({ type = "textbox" })
+-- Register widget
+vicious.register(cpuwidget, vicious.widgets.cpu, "$1%")
+
+-- Temp widget
+tzswidget = widget({ type = "textbox" })
+vicious.register(tzswidget, vicious.widgets.thermal, " $1C", 19, "thermal_zone0")
+
+--  Network usage widget
+netwidget = widget({ type = "textbox" })
+-- Register widget
+vicious.register(netwidget, vicious.widgets.net, '<span color="#CC9393">${eth0 down_kb}</span> <span color="#7F9F7F">${eth0 up_kb}</span>', 3)
+
 -- Create a textclock widget
 mytextclock = awful.widget.textclock({ align = "right" })
 
@@ -160,6 +177,9 @@ for s = 1, screen.count() do
         },
         mylayoutbox[s],
         mytextclock,
+       -- netwidget, "  ",
+        tzswidget, "  ",
+        cpuwidget, "  ",
         s == 1 and mysystray or nil,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft

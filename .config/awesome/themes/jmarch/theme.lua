@@ -133,6 +133,14 @@ theme.titlebar_maximized_button_normal_active = themeDir .. "titlebar/maximized_
 theme.titlebar_maximized_button_focus_inactive  = themeDir .. "titlebar/maximized_focus_inactive.png"
 theme.titlebar_maximized_button_normal_inactive = themeDir .. "titlebar/maximized_normal_inactive.png"
 -- }}}
--- }}}
+
+-- {{{ Icon
+iconDir = home .. "/.config/awesome/icons/"
+theme.cpu_icon = iconDir .. "cpu.png"
+theme.ram_icon = iconDir .. "down.png"
+theme.volume_icon = iconDir .. "vol.png"
+theme.temp_icon = iconDir .. "temp.png"
+theme.net_up_icon = iconDir .. "up.png"
+theme.net_down_icon = iconDir .. "down.png"
 
 return theme

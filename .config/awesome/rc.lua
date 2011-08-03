@@ -83,11 +83,15 @@ mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
 
 -- cpu usage widget
 cpuwidget = widget({ type = "textbox" })
+cpuicon = widget({ type = "imagebox" })
+cpuicon.image = image(beautiful.cpu_icon)
 -- Register widget
 vicious.register(cpuwidget, vicious.widgets.cpu, "$1%")
 
 -- Temp widget
 tzswidget = widget({ type = "textbox" })
+tzicon = widget({ type = "imagebox" })
+tzicon.image = image(beautiful.temp_icon)
 vicious.register(tzswidget, vicious.widgets.thermal, " $1C", 19, "thermal_zone0")
 
 --  Network usage widget
@@ -146,6 +150,11 @@ mytasklist.buttons = awful.util.table.join(
                                               if client.focus then client.focus:raise() end
                                           end))
 
+--Separator
+sep = widget({ type = "textbox", align = "center" })
+--sep.text = '<span color="#151515" > · </span>'
+sep.text = ' '
+
 for s = 1, screen.count() do
     -- Create a promptbox for each screen
     mypromptbox[s] = awful.widget.prompt({ layout = awful.widget.layout.horizontal.leftright })
@@ -175,11 +184,11 @@ for s = 1, screen.count() do
             mypromptbox[s],
             layout = awful.widget.layout.horizontal.leftright
         },
-        mylayoutbox[s],
-        mytextclock,
+        mylayoutbox[s], sep,
+        mytextclock, sep,
        -- netwidget, "  ",
-        tzswidget, "  ",
-        cpuwidget, "  ",
+        tzswidget, tzicon, sep,
+        cpuwidget, cpuicon, sep,
         s == 1 and mysystray or nil,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
